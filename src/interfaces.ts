@@ -11,7 +11,7 @@ export interface MoveObject {
 export type GameMode = 'manuel' | 'auto';
 
 export interface Possibility {
-    isPossible: (numberToBeChecked: number) => boolean;
+    isPossible: (current: number, numberToBeChecked: number, gameStrategy: GameStrategy) => boolean;
 }
 
 export interface WinStrategy {
@@ -41,12 +41,13 @@ export interface Game {
     winStrategy: WinStrategy;
     gameStrategy: GameStrategy;
     addPlayer: (player: Player) => Player[];
-    removePlayer: (player: Player) => void;
 }
 
 export interface GameBuilder {
-    build: () => Game;
+    build: (config: GameConfig) => Game;
     buildPossibility: () => Possibility;
+    buildWinStrategy: () => WinStrategy;
+    buildGameStrategy: () => GameStrategy;
     buildMode: () => GameMode
 }
 

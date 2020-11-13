@@ -3,7 +3,7 @@ import { Button, Card, Statistic, Tooltip } from "antd";
 import React from "react";
 import { AllPossibleMoves } from "../../definitions";
 import { MoveObject, Possibility } from '../../interfaces';
-import "../App.css";
+import "../../App.css";
 import "./PlayerControls.css";
 
 interface PlayerControlsProps {
@@ -18,7 +18,7 @@ interface PlayerControlsState {
 export class PlayerControls extends React.Component<PlayerControlsProps, PlayerControlsState> {
 
     calculatePossibleMoves(valueToBeChecked: number) {
-        return AllPossibleMoves.filter(move => this.props.possibility.isPossible(move.value))
+        return AllPossibleMoves.filter(move => this.props.possibility.isPossible(this.props.currentValue, move.value, this.props.game.gameStrategy))
     }
 
     render() {
@@ -37,11 +37,11 @@ export class PlayerControls extends React.Component<PlayerControlsProps, PlayerC
                     />
                     <div className="controls">
                         {
-                            AllPossibleMoves.map((move, index) => {
-                                <Tooltip title={move.title}>
-                                    <Button onClick={() => this.props.onMoveHandler(move.value)} className="control-button" disabled={possibleMoves.includes(move)} type="primary" shape="circle" icon={move.icon} />
+                            AllPossibleMoves.map((move, index) => (
+                                <Tooltip key={index} title={move.title}>
+                                    <Button onClick={() => this.props.onMoveHandler(move.value)} className="control-button" disabled={possibleMoves.includes(move)} type="primary" shape="circle" icon={< move.icon />} />
                                 </Tooltip>
-                            })
+                            ))
                         }
                     </div>
                 </div>

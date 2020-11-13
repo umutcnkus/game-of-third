@@ -3,13 +3,13 @@ import "../App.css"
 import "./OnboardingPage.css"
 import { Popover, Button, Input } from 'antd';
 import { RouteComponentProps } from 'react-router-dom'
-import { CustomSocket } from "../App";
+import { Game } from "../interfaces";
 
 interface OnboardingPageRouterProps {
 }
 
 interface OnboardingPageProps extends RouteComponentProps<OnboardingPageRouterProps> {
-    socket: CustomSocket
+    game: Game
 }
 
 interface OnboardingPageState {
@@ -23,23 +23,23 @@ export class OnboardingPage extends React.Component<OnboardingPageProps, Onboard
     }
 
     componentDidMount() {
-        this.props.socket.on("room-created", (params) => this.moveToGameBoard(params));
-        this.props.socket.on("join-game", (params) => this.props.history.push(`/play/${params.gameId}`));
+        this.props.game.socket.on("room-created", (params) => this.moveToGameBoard(params));
+        this.props.game.socket.on("join-game", (params) => this.props.history.push(`/play/${params.gameId}`));
     }
 
     initializeNewGame() {
-        this.props.socket.emit("newGame");
+        this.props.game.socket.emit("newGame");
     }
 
     moveToGameBoard(params) {
-        this.props.socket.isHost = true;
+        this.props.game.socket.isHost = true;
         console.log('Hey there');
         this.props.history.push(`/play/${params.gameId}`)
     }
 
     joinExistingGame(roomId) {
-        this.props.socket.emit("join-game", { roomId: roomId });
-        this.props.socket.isHost = false;
+        this.props.game.socket.emit("join-game", { roomId: roomId });
+        this.props.game.socket.isHost = false;
     }
 
     render() {

@@ -57,6 +57,8 @@ export class GameBoard extends React.Component<GameBoardProps, GameBoardState> {
     }
 
     move(value) {
+        console.log(value);
+
         this.props.game.socket.emit("moved", { previousValue: this.state.total, playedMove: value })
     }
 
@@ -104,7 +106,7 @@ export class GameBoard extends React.Component<GameBoardProps, GameBoardState> {
                         }
                     </div>
                     <div className="current-number">
-                        <PlayerControls />
+                        <PlayerControls possibility={this.props.game.possibility} currentValue={this.state.total} onMoveHandler={this.move.bind(this)} />
                     </div>
                 </div>
                 <Modal

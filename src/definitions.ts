@@ -1,5 +1,8 @@
-import { DownOutlined, UpOutlined, RightOutlined, NumberOutlined, SmileOutlined, FrownOutlined } from '@ant-design/icons';
+import { DownOutlined, UpOutlined, RightOutlined } from '@ant-design/icons';
 import { MoveObject } from './interfaces';
+
+export const HOST = "http://localhost:";
+export const PORT = "1234";
 
 export const DIVIDER = 3;
 
@@ -19,7 +22,7 @@ export const AllPossibleMoves: MoveObject[] = [
     {
         name: "decreaseByOne",
         title: "Increase by One",
-        icon: DownOutlined,
+        icon: RightOutlined,
         value: MoveValues.DECREASE_BY_ONE
     },
     {

@@ -1,6 +1,9 @@
 import { DIVIDER } from "../definitions";
-import { Possibility } from "../interfaces";
+import { GameStrategy, Possibility } from "../interfaces";
 
 export class DivideByPossibility implements Possibility {
-    isPossible = (value: number) => value % DIVIDER == 0;
+    isPossible = (current: number, value: number, gameStrategy: GameStrategy) => gameStrategy.play({
+        before: current,
+        played: value
+    }).after % DIVIDER == 0;
 }
