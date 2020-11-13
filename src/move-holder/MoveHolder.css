@@ -1,0 +1,33 @@
+.single-move-container{
+    display: flex;
+}
+
+.self{
+    align-self: flex-end;
+}
+
+.opponent{
+    align-self: flex-start;
+}
+
+.s-move-container{
+    flex-direction: column;
+}
+
+.previous-tag{
+    width: fit-content;
+}
+
+.fit{
+    width: fit-content;
+    height: 100%;
+}
+
+.calculation-container {
+    margin-top: 8px;
+    display: flex;
+}
+
+.ant-tag:last-child {
+    margin: 0;
+}
