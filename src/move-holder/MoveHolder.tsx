@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css"
 import "./MoveHolder.css"
 import { Alert, Tag } from 'antd';
+import ScrollIntoViewIfNeeded from 'react-scroll-into-view-if-needed';
 
 interface MoveHolderProps {
     previousValue?: number;
@@ -15,16 +16,13 @@ interface MoveHolderState {
 }
 export class MoveHolder extends React.Component<MoveHolderProps, MoveHolderState> {
 
-    constructor(props: MoveHolderProps) {
-        super(props);
-    }
-
     render() {
         const { previousValue, playedMove, remainder, isSelf } = this.props;
         return (
-            <div className={`single-move-container ${isSelf ? 'self' : 'opponent'}`}>
+            
+            <ScrollIntoViewIfNeeded className={`single-move-container ${isSelf ? 'self' : 'opponent'}`}>
                 {
-                    playedMove == -1 &&
+                    playedMove === -1 &&
                     <React.Fragment>
                         <div className="flex s-move-container">
                             <Alert message="Decreased" type="error" />
@@ -40,7 +38,7 @@ export class MoveHolder extends React.Component<MoveHolderProps, MoveHolderState
 
                 }
                 {
-                    playedMove == 0 &&
+                    playedMove === 0 &&
                     <React.Fragment>
                         <div className="flex s-move-container">
                             <Alert message="Passed" type="info" />
@@ -56,7 +54,7 @@ export class MoveHolder extends React.Component<MoveHolderProps, MoveHolderState
                     </React.Fragment>
                 }
                 {
-                    playedMove == 1 &&
+                    playedMove === 1 &&
                     <React.Fragment>
                         <div className="flex s-move-container">
                             <Alert message="Increased" type="success" />
@@ -70,9 +68,7 @@ export class MoveHolder extends React.Component<MoveHolderProps, MoveHolderState
                         </div>
                     </React.Fragment>
                 }
-
-
-            </div>
+            </ScrollIntoViewIfNeeded>
         )
     }
 }

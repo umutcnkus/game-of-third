@@ -1,0 +1,28 @@
+.spinner {
+    margin-bottom: 20px;
+}
+
+.tags {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tag{
+    text-align: center;
+    width:200px;
+}
+
+.waiting-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+
+.tag:last-child{
+    margin-top: 10px;
+    margin-right: 8px;
+}

@@ -1,14 +1,14 @@
 import { NumberOutlined } from '@ant-design/icons';
-import { Button, Card, Statistic, Tooltip } from "antd";
+import { Button, Card, Statistic, Tooltip, Spin, Tag } from "antd";
 import React from "react";
 import { AllPossibleMoves } from "../../definitions";
-import { MoveObject, Possibility } from '../../interfaces';
 import "../../App.css";
 import "./PlayerControls.css";
+import { Game } from '../../Game';
 
 interface PlayerControlsProps {
+    game: Game;
     currentValue: number;
-    possibility: Possibility;
     onMoveHandler: (playedValue: number) => void;
 }
 
@@ -17,14 +17,27 @@ interface PlayerControlsState {
 
 export class PlayerControls extends React.Component<PlayerControlsProps, PlayerControlsState> {
 
-    calculatePossibleMoves(valueToBeChecked: number) {
-        return AllPossibleMoves.filter(move => this.props.possibility.isPossible(this.props.currentValue, move.value, this.props.game.gameStrategy))
+    calculatePossibleMoves() {
+        const { currentValue, gameStrategy, possibility } = this.props.game;
+        return  AllPossibleMoves.filter((move) => possibility.isPossible(currentValue, move.value, gameStrategy));          
     }
 
     render() {
-        const { currentValue } = this.props;
-        const possibleMoves: MoveObject[] = this.calculatePossibleMoves(currentValue);
-
+        const currentValue = this.props.currentValue;
+        const possibleMoves: number[] = this.calculatePossibleMoves().map((move) => move.value);
+        if(!this.props.game.isStarted){
+            return (
+                <Card>
+                        <div className="waiting-card">
+                            <Spin className="spinner" size="default" />
+                            <div className="tags">
+                                <Tag className="tag" color="magenta">Waiting for Opponent</Tag>
+                                <Tag className="tag" color="magenta">Use Auto - Play Instead?</Tag>
+                            </div>
+                        </div>
+                </Card>
+            )
+        }
         return (
             <Card>
                 <div className="current-status">
@@ -39,7 +52,7 @@ export class PlayerControls extends React.Component<PlayerControlsProps, PlayerC
                         {
                             AllPossibleMoves.map((move, index) => (
                                 <Tooltip key={index} title={move.title}>
-                                    <Button onClick={() => this.props.onMoveHandler(move.value)} className="control-button" disabled={possibleMoves.includes(move)} type="primary" shape="circle" icon={< move.icon />} />
+                                    <Button onClick={() => this.props.onMoveHandler(move.value)} className="control-button" disabled={!possibleMoves.includes(move.value) || !this.props.game.isSelf} type="primary" shape="circle" icon={< move.icon />} />
                                 </Tooltip>
                             ))
                         }

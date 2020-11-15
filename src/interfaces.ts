@@ -1,5 +1,6 @@
 import { DownOutlined } from '@ant-design/icons';
 import { CustomSocket } from './App';
+import { Game } from './Game';
 
 export interface MoveObject {
     title: string;
@@ -26,13 +27,14 @@ export interface MoveState {
     before: number;
     played: number;
     after: number;
+    isSelf?: boolean;
 }
 
 export interface Player {
     isComputer: boolean;
 }
 
-export interface Game {
+export interface IGame {
     possibility: Possibility;
     isSelf: boolean;
     players: Player[];
@@ -40,11 +42,10 @@ export interface Game {
     socket: CustomSocket;
     winStrategy: WinStrategy;
     gameStrategy: GameStrategy;
-    addPlayer: (player: Player) => Player[];
 }
 
 export interface GameBuilder {
-    build: (config: GameConfig) => Game;
+    build: () => Game
     buildPossibility: () => Possibility;
     buildWinStrategy: () => WinStrategy;
     buildGameStrategy: () => GameStrategy;
@@ -55,4 +56,8 @@ export interface GameConfig {
     gameMode: GameMode;
     winStrategy: WinStrategy;
     gameStrategy: GameStrategy;
+}
+
+export interface Logger {
+    log: (value) => void
 }

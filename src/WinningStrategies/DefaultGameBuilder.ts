@@ -1,4 +1,4 @@
-import { DefaultConfig } from "../DefaultGameConfig";
+import { ConsoleLogger } from '../ConsoleLogger';
 import { Game } from "../Game";
 import { DivideBy } from "../GameStrategies/DivideBy";
 import { GameBuilder, GameMode } from "../interfaces";
@@ -13,8 +13,10 @@ export class DefaultGameBuilder implements GameBuilder {
         this.game.possibility = this.buildPossibility()
         this.game.winStrategy = this.buildWinStrategy()
         this.game.mode = this.buildMode()
+        this.game.logger = new ConsoleLogger();
         return this.game;
     }
+
     buildGameStrategy() {
         return new DivideBy()
     }
