@@ -1,8 +1,8 @@
 import { DownOutlined, UpOutlined, RightOutlined } from '@ant-design/icons';
 import { MoveObject } from './interfaces';
 
-export const HOST = "http://192.168.1.145:";
-export const PORT = "1234";
+export const HOST = "http://fast-ravine-25294.herokuapp.com:";
+export const PORT = "80";
 
 export const DIVIDER = 3;
 export const MIN = 10000;

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as HashRouter, Route, Switch } from "react-router-dom";
 import { Socket } from 'socket.io-client';
 import { OnboardingPage } from './onboarding-page/OnboardingPage';
 import { GameBoard } from './game-board/GameBoard';
@@ -17,12 +17,10 @@ function App() {
   const game = builder.build()
 
   return (
-    <Router>
-      <Switch>
+    <HashRouter basename='/game-of-third'>      
         <Route path="/" exact render={(props) => <OnboardingPage {...props} game={game} />} />
         <Route path="/play/:id" render={(props) => <GameBoard {...props} game={game} />} />
-      </Switch>
-    </Router>
+    </HashRouter>
   );
 }
 

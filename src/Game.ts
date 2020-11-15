@@ -12,7 +12,7 @@ export class Game implements IGame {
     isFinished: boolean = false;
     players: Player[] = [];
     mode: GameMode;
-    socket: CustomSocket = io(`${HOST}${PORT}`) as CustomSocket;
+    socket: CustomSocket = this.getWebSocket()
     winStrategy: WinStrategy;
     gameStrategy: GameStrategy;
     currentValue: number;
@@ -95,6 +95,10 @@ export class Game implements IGame {
         const initalValue = Math.floor((Math.random() * MAX) + MIN);
         this.logger.log(`Initialize Event Emitted`)
         this.socket.emit(SocketEvent.INITIALIZE, {initialValue: initalValue, roomId: this.roomId});
+    }
+
+    getWebSocket(){
+        return io(`${HOST}${PORT}`) as CustomSocket;
     }
 
     reset(){
