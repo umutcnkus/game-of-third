@@ -98,7 +98,7 @@ export class Game implements IGame {
     }
 
     getWebSocket(){
-        return io(`${HOST}${PORT}`) as CustomSocket;
+        return io(`${HOST}${PORT}`, {secure: true}) as CustomSocket;
     }
 
     reset(){

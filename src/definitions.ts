@@ -1,8 +1,8 @@
 import { DownOutlined, UpOutlined, RightOutlined } from '@ant-design/icons';
 import { MoveObject } from './interfaces';
 
-export const HOST = "www.umutcankus.me:";
-export const PORT = "80";
+export const HOST = "umutcankus.me";
+export const PORT = "";
 
 export const DIVIDER = 3;
 export const MIN = 10000;
