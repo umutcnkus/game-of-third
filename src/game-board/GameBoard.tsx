@@ -66,7 +66,7 @@ export class GameBoard extends React.Component<GameBoardProps, GameBoardState> {
     }
 
     goToHomePage(){
-        window.location.href = "/"
+        window.location.href = "/game-of-third"
     }
 
     changeAutoPlay(isAuto) {
