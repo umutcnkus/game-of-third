@@ -1,4 +1,4 @@
-import { Button, Divider, Modal, Result, Switch, Tag } from 'antd';
+import { Button, Divider, Modal, Result, Switch, Tag, Tooltip } from 'antd';
 import React from "react";
 import { RouteComponentProps } from 'react-router-dom';
 import "../App.css";
@@ -85,10 +85,12 @@ export class GameBoard extends React.Component<GameBoardProps, GameBoardState> {
         return (
             <div className="col-12 flex v-center main-container">
                 <div className="col-4 game-board-container flex">
-                    <div className="info">
-                        <Tag className="game-id-tag" color="blue">{id}</Tag>
-                        {!this.props.game.isStarted && <Switch onChange={(checked) => this.changeAutoPlay(checked)} checked={this.state.isAuto} className="auto-play-switch" checkedChildren="Auto Play" unCheckedChildren="Auto Play" defaultChecked />}
-                    </div>
+                    <Tooltip  title="Share this with your friends and play together!">
+                        <div className="info">
+                            <Tag className="game-id-tag" color="blue">{id}</Tag>
+                            {!this.props.game.isStarted && <Switch onChange={(checked) => this.changeAutoPlay(checked)} checked={this.state.isAuto} className="auto-play-switch" checkedChildren="Auto Play" unCheckedChildren="Auto Play" defaultChecked />}
+                        </div>
+                    </Tooltip>
                     <Divider dashed ></Divider>
                     <div className="moves flex">
                         {this.moves.map((move, index) =>
@@ -97,7 +99,7 @@ export class GameBoard extends React.Component<GameBoardProps, GameBoardState> {
                         }
                     </div>
                     <div className="current-number">
-                        <PlayerControls currentValue={this.game.currentValue} game={this.game} onMoveHandler={this.move.bind(this)} />
+                        <PlayerControls onAutoPlayChange={this.changeAutoPlay.bind(this)} currentValue={this.game.currentValue} game={this.game} onMoveHandler={this.move.bind(this)} />
                     </div>
                 </div>
                 <Modal

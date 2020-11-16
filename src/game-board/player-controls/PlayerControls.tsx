@@ -10,6 +10,7 @@ interface PlayerControlsProps {
     game: Game;
     currentValue: number;
     onMoveHandler: (playedValue: number) => void;
+    onAutoPlayChange: (isAuto: boolean) => void;
 }
 
 interface PlayerControlsState {
@@ -32,7 +33,7 @@ export class PlayerControls extends React.Component<PlayerControlsProps, PlayerC
                             <Spin className="spinner" size="default" />
                             <div className="tags">
                                 <Tag className="tag" color="magenta">Waiting for Opponent</Tag>
-                                <Tag className="tag" color="magenta">Use Auto - Play Instead?</Tag>
+                                <Tag onClick={() => this.props.onAutoPlayChange(true)} className="tag" color="magenta">Use Auto - Play Instead?</Tag>
                             </div>
                         </div>
                 </Card>
