@@ -1,7 +1,7 @@
 import { DownOutlined, UpOutlined, RightOutlined } from '@ant-design/icons';
 import { MoveObject } from './interfaces';
 
-export const HOST = "http://fast-ravine-25294.herokuapp.com:";
+export const HOST = "www.umutcankus.me:";
 export const PORT = "80";
 
 export const DIVIDER = 3;
