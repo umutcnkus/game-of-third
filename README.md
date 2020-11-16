@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+# Goal
+The Goal is to implement a game with two independent units – the players – communicating with each other using an API.
+# Description
+When a player starts, they incept a random (whole) number and send it to the second player as an approach of starting the game. The receiving player can then choose between adding one of {-1,0,1} in order to get to a number that is divisible by 3. The resulting whole number is then sent back to the original sender.
+The same rules are applied until one player reaches the number 1.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Stack
+- The solution is coded using
+	- ReactJS on frontend [Deployed to Github Pages]
+	- Node.js and Express in [backend](https://github.com/umutcnkus/game-of-third-server "backend") [Deployed to Heroku]
+	- Socket.io to broadcast events
+	- Cloudfare to connect secure Github Deployment to Unsecure Heroku Dyno
 
-## Available Scripts
+# Installation
+ If you want to run this app localy:
 
-In the project directory, you can run:
+- Clone the project
 
-### `npm start`
+`git clone https://github.com/umutcnkus/game-of-third.git`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Be sure you have node and npm installed then install dependencies.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+`npm i`
 
-### `npm test`
+- Start the project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm start`
 
-### `npm run build`
+The first to step is identical, use the following to clone the project:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`git clone https://github.com/umutcnkus/game-of-third-server.git`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Then start the server
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`node ./index.js`
 
-### `npm run eject`
+This demo projects is configured to play together.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Demo
+Have fun!
+[https://umutcnkus.github.io/game-of-third](https://umutcnkus.github.io/game-of-third "https://umutcnkus.github.io/game-of-third")
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
