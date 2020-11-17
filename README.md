@@ -35,7 +35,7 @@ Then start the server
 
 `node ./index.js`
 
-This demo projects is configured to play together.
+This demo projects are configured to play together.
 
 # Demo
 Have fun!
