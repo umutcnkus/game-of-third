@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
-import { BrowserRouter as HashRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as HashRouter, Route } from "react-router-dom";
 import { Socket } from 'socket.io-client';
-import { OnboardingPage } from './onboarding-page/OnboardingPage';
-import { GameBoard } from './game-board/GameBoard';
-import { DefaultGameBuilder } from './WinningStrategies/DefaultGameBuilder';
+import { OnboardingPage } from './components/onboarding-page/OnboardingPage';
+import { GameBoard } from './components/game-board/GameBoard';
+import { DefaultGameBuilder } from './DefaultGameBuilder';
 
 export interface CustomSocket extends Socket {
   isHost: boolean;

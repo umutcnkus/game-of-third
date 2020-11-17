@@ -1,5 +1,5 @@
-import { DIVIDER } from "../definitions";
-import { GameStrategy, MoveState } from "../interfaces";
+import { DIVIDER } from "../utils/definitions";
+import { GameStrategy, MoveState } from "../utils/interfaces";
 
 export class DivideBy implements GameStrategy {
     play = (params: Partial<MoveState>) => {

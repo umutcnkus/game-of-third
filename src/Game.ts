@@ -1,7 +1,7 @@
 import { io } from "socket.io-client";
 import { CustomSocket } from "./App";
-import { HOST, MAX, MIN, PORT, SocketEvent } from "./definitions";
-import { GameMode, GameStrategy, IGame, Logger, MoveState, Player, Possibility, WinStrategy } from "./interfaces";
+import { HOST, MAX, MIN, PORT, SocketEvent } from "./utils/definitions";
+import { GameMode, GameStrategy, IGame, Logger, MoveState, Player, Possibility, WinStrategy } from "./utils/interfaces";
 
 export class Game implements IGame {
     possibility: Possibility;

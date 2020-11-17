@@ -1,5 +1,5 @@
 import { DivideBy } from "./GameStrategies/DivideBy";
-import { GameConfig } from "./interfaces";
+import { GameConfig } from "./utils/interfaces";
 import { WinByGettingOne } from "./WinningStrategies/WinByGettingOneStrategy";
 
 export const DefaultConfig: GameConfig = {

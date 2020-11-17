@@ -1,0 +1,72 @@
+.game-board-container {
+    height: 100%;
+    flex-direction: column;
+    border:1px solid #f1f1f1;
+    margin: 10px;
+}
+
+.main-container{
+    height: 100%;
+}
+
+.auto-play-switch{
+    margin-left: auto;
+}
+
+.game-id-tag{
+    height: 22px;
+}
+
+.info{
+    display: flex;
+    align-self: flex-end;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px 20px 0 20px;
+}
+
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.control-button {
+    margin: 10px;
+}
+
+.moves {
+    flex-direction: column;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+.current-status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.current-number {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.statistics, .controls {
+    width: 50%;
+}
+
+.moves::-webkit-scrollbar {
+  width: 2px;
+}
+
+.moves::-webkit-scrollbar-track {
+  display:none
+}
+ 
+/* Handle */
+.moves::-webkit-scrollbar-thumb {
+  background: #f1f1f1; 
+}
