@@ -9,8 +9,8 @@ import "./PlayerControls.css";
 interface PlayerControlsProps {
     game: Game;
     currentValue: number;
-    onMoveHandler: (playedValue: number) => void;
-    onAutoPlayChange: (isAuto: boolean) => void;
+    onMoveHandler?: (playedValue: number) => void;
+    onAutoPlayChange?: (isAuto: boolean) => void;
 }
 
 interface PlayerControlsState {
