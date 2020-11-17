@@ -35,9 +35,10 @@ Then start the server
 
 `node ./index.js`
 
-This demo projects is configured to play together.
+This demo projects are configured to play together.
 
 # Demo
 Have fun!
-[https://umutcnkus.github.io/game-of-third](https://umutcnkus.github.io/game-of-third "https://umutcnkus.github.io/game-of-third")
+- [https://umutcnkus.github.io/game-of-third](https://umutcnkus.github.io/game-of-third "https://umutcnkus.github.io/game-of-third")
+- Please note that first response time can be low as I'm using a free heroku dyno and it auto-closes the app after a period of inactivity.
 
