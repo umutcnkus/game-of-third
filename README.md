@@ -26,7 +26,8 @@ The same rules are applied until one player reaches the number 1.
 
 `npm start`
 
-The first to step is identical, use the following to clone the project:
+To use this project locally you also need the server implementation.
+The first two step is identical, use the following to clone the project:
 
 `git clone https://github.com/umutcnkus/game-of-third-server.git`
 
