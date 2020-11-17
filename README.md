@@ -40,4 +40,5 @@ This demo projects is configured to play together.
 # Demo
 Have fun!
 [https://umutcnkus.github.io/game-of-third](https://umutcnkus.github.io/game-of-third "https://umutcnkus.github.io/game-of-third")
+Please note that first response time can be low as I'm using free heroku dyno and it auto-close the app after a period of inactivity.
 
