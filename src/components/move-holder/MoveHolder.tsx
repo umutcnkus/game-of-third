@@ -28,7 +28,7 @@ export class MoveHolder extends React.Component<MoveHolderProps, MoveHolderState
                             <Alert message="Decreased" type="error" />
                             <div className="calculation-container">
                                 <Tag className="previous-tag" color="magenta">{previousValue} - {1}</Tag>
-                                <Tag className="fit" color="blue">%</Tag>
+                                <Tag className="fit" color="blue">/</Tag>
                                 <Tag className="previous-tag" color="magenta">3</Tag>
                                 <Tag className="fit" color="blue">=</Tag>
                                 <Tag className="previous-tag" color="magenta">{remainder}</Tag>
@@ -44,7 +44,7 @@ export class MoveHolder extends React.Component<MoveHolderProps, MoveHolderState
                             <Alert message="Passed" type="info" />
                             <div className="calculation-container">
                                 <Tag className="previous-tag" color="magenta">{previousValue} + {0}</Tag>
-                                <Tag className="fit" color="blue">%</Tag>
+                                <Tag className="fit" color="blue">/</Tag>
                                 <Tag className="previous-tag" color="magenta">3</Tag>
                                 <Tag className="fit" color="blue">=</Tag>
                                 <Tag className="previous-tag" color="magenta">{remainder}</Tag>
@@ -60,7 +60,7 @@ export class MoveHolder extends React.Component<MoveHolderProps, MoveHolderState
                             <Alert message="Increased" type="success" />
                             <div className="calculation-container">
                                 <Tag className="previous-tag" color="magenta">{previousValue} + {1}</Tag>
-                                <Tag className="fit" color="blue">%</Tag>
+                                <Tag className="fit" color="blue">/</Tag>
                                 <Tag className="previous-tag" color="magenta">3</Tag>
                                 <Tag className="fit" color="blue">=</Tag>
                                 <Tag className="previous-tag" color="magenta">{remainder}</Tag>
