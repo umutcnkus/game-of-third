@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/game-of-third/static/css/main.ddfbc176.chunk.css",
-    "main.js": "/game-of-third/static/js/main.9427dedc.chunk.js",
-    "main.js.map": "/game-of-third/static/js/main.9427dedc.chunk.js.map",
-    "runtime-main.js": "/game-of-third/static/js/runtime-main.93d17641.js",
-    "runtime-main.js.map": "/game-of-third/static/js/runtime-main.93d17641.js.map",
-    "static/css/2.a10ec74d.chunk.css": "/game-of-third/static/css/2.a10ec74d.chunk.css",
-    "static/js/2.0865df81.chunk.js": "/game-of-third/static/js/2.0865df81.chunk.js",
-    "static/js/2.0865df81.chunk.js.map": "/game-of-third/static/js/2.0865df81.chunk.js.map",
-    "static/js/3.de5d68fe.chunk.js": "/game-of-third/static/js/3.de5d68fe.chunk.js",
-    "static/js/3.de5d68fe.chunk.js.map": "/game-of-third/static/js/3.de5d68fe.chunk.js.map",
+    "main.js": "/game-of-third/static/js/main.a5c4344a.chunk.js",
+    "main.js.map": "/game-of-third/static/js/main.a5c4344a.chunk.js.map",
+    "runtime-main.js": "/game-of-third/static/js/runtime-main.adb39e38.js",
+    "runtime-main.js.map": "/game-of-third/static/js/runtime-main.adb39e38.js.map",
+    "static/css/2.ea9b1cc9.chunk.css": "/game-of-third/static/css/2.ea9b1cc9.chunk.css",
+    "static/js/2.4d50c71a.chunk.js": "/game-of-third/static/js/2.4d50c71a.chunk.js",
+    "static/js/2.4d50c71a.chunk.js.map": "/game-of-third/static/js/2.4d50c71a.chunk.js.map",
+    "static/js/3.e6b0667c.chunk.js": "/game-of-third/static/js/3.e6b0667c.chunk.js",
+    "static/js/3.e6b0667c.chunk.js.map": "/game-of-third/static/js/3.e6b0667c.chunk.js.map",
     "index.html": "/game-of-third/index.html",
-    "static/css/2.a10ec74d.chunk.css.map": "/game-of-third/static/css/2.a10ec74d.chunk.css.map",
+    "static/css/2.ea9b1cc9.chunk.css.map": "/game-of-third/static/css/2.ea9b1cc9.chunk.css.map",
     "static/css/main.ddfbc176.chunk.css.map": "/game-of-third/static/css/main.ddfbc176.chunk.css.map",
-    "static/js/2.0865df81.chunk.js.LICENSE.txt": "/game-of-third/static/js/2.0865df81.chunk.js.LICENSE.txt"
+    "static/js/2.4d50c71a.chunk.js.LICENSE.txt": "/game-of-third/static/js/2.4d50c71a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.93d17641.js",
-    "static/css/2.a10ec74d.chunk.css",
-    "static/js/2.0865df81.chunk.js",
+    "static/js/runtime-main.adb39e38.js",
+    "static/css/2.ea9b1cc9.chunk.css",
+    "static/js/2.4d50c71a.chunk.js",
     "static/css/main.ddfbc176.chunk.css",
-    "static/js/main.9427dedc.chunk.js"
+    "static/js/main.a5c4344a.chunk.js"
   ]
 }
